@@ -1,0 +1,17 @@
+.classpath
+.factorypath
+.project
+.website-config
+.idea/.gitignore
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.metadata/.factorypath.metadata-item
+.metadata/.project.metadata-item
+.metadata/.settings.metadata-dir
+.metadata/.website-config.metadata-item
+.metadata/build.xml.metadata-item
+.metadata/CruscottoAuditAtpoWebWeb.ecl.metadata-item
+.metadata/src.metadata-dir
+.metadata/WebContent.metadata-dir
+.metadata/WebDiagram.gph.metadata-item
