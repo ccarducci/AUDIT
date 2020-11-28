@@ -1627,6 +1627,40 @@
         	</result>
    		</action>
    		
+   		<!-- **************************************** -->
+	 	<!-- **************************************** -->
+	 	<!-- ACTION PER LA GENERAZIONE DEI REPORT PDF ANNUALI -->
+	 	<!-- **************************************** -->
+	 	<!-- **************************************** -->
+	 	<action name="getReportAccessoAnnualePDF" class="it.tecnet.crs.report.web.action.ReportAccessoAnnualePDFAction" method="getReportAccessoAnnualePDF">
+                <interceptor-ref name="authorization">
+                   	<param name="allowedRoles">auditors01, auditors02, dirigente, delegato01, delegato02, masterDCSIT</param>
+                	<param name="disallowedRoles"></param>
+                </interceptor-ref>
+                <interceptor-ref name="jsonServiceStack" />   
+        	<result type="stream">
+            	<param name="contentType">"application/pdf"</param>
+            	<param name="inputName">model.exportPDFFile</param>
+            	<param name="contentDisposition">attachment;filename="${model.exportPDFFileName}"</param>
+            	<param name="bufferSize">1024</param>
+        	</result>
+   		</action>
+   		
+   		
+   		<action name="getAllegatoReportAccessoPDFAnnuale" class="it.tecnet.crs.report.web.action.ReportAccessoAnnualePDFAction" method="getAllegatoReportAccessoPDFAnnuale">
+                <interceptor-ref name="authorization">
+                   	<param name="allowedRoles">auditors01, auditors02, dirigente, delegato01, delegato02, masterDCSIT</param>
+                	<param name="disallowedRoles"></param>
+                </interceptor-ref>
+                <interceptor-ref name="jsonServiceStack" />   
+        	<result type="stream">
+            	<param name="contentType">"application/pdf"</param>
+            	<param name="inputName">model.exportPDFFile</param>
+            	<param name="contentDisposition">attachment;filename="${model.exportPDFFileName}"</param>
+            	<param name="bufferSize">1024</param>
+        	</result>
+   		</action>
+   		
    		 <!-- **************************************** -->
 	 	<!-- **************************************** -->
 	 	<!-- ACTION PER LA GENERAZIONE DEI REPORT ERM -->

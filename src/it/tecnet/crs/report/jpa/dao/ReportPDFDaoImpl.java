@@ -1084,5 +1084,100 @@ try {
 		
 		return bean;
 	}
+	@Override
+	public Object[] getReportAccessoPDFAnnuale(long idSSessione) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<Object[]> getRiepilogoIstanzeAnnuale(long idSSessione) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<Object[]> getRiepilogoFasiAnnuale(long idSSessione) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<Object[]> getRiepilogoRischiAnnuale(long idSSessione) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<Object[]> getRisEsprByIdMNonConfAnnuale(Long idMRischio, long idSSessione) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<Object[]> getRiepilogoFascicoloAnnuale(long idSSessione) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<Object[]> getRiepilogoDocMancAnnuale(long idSSessione) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<Object[]> getEsitoByTipoDifesaWithDissensoAnnuale(long idSSessione) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<Object[]> getRiepilogoGiudiziAnnuale(long idSSessione) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<Object[]> getTipoDifesaIncompletaAnnuale(long idSSessione, String tipoDifesa) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<Object[]> getRisultatiByTempoAnnuale(long idSSessione) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<Object[]> getMNonConfByIdFaseAnnuale(Long idFase, long idSSessione) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<Object[]> getVarCompByIdMNonConfAnnuale(Long idMNonConf) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<Object[]> getEsitoByTipoDifesaAnnuale(long idSSessione) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<String> getListaAuditorsAnnuale(long idSSessione) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public Object[] getAllegatoReportAccessoPDFAnnuale(long idSSessione) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<AtpoPratiche> getReportAllegatiPDFAnnuale(String sede, long idSessione) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<Object[]> getGiudiziDefinitiviEtichetteAnnuale() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+	// ---------------------------------------------------------
+	
+	
 	
 }

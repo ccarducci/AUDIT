@@ -327,5 +327,208 @@ public class ReportPDFServicImpl implements ReportPDFService {
 	public String[] getElencoRischi() {
 		return  reportPDFDao.getElencoRischi();
 	}
+	
+	
+	// -------------------------------------------------------------------------------------------------------------------------------------------
+	
+	@Override
+	public ReportAccessoPDFDto getReportAccessoAnnualePDF(long idSSessione) {
+		ReportAccessoPDFDto accesso = new ReportAccessoPDFDto();
+		Object[] obj = reportPDFDao.getReportAccessoPDFAnnuale(idSSessione);
+
+		if (obj != null) {
+			accesso = ModelToDto.modelToReportAccessoPDFDto(obj);
+		}
+
+		return accesso;
+	}
+	@Override
+	public List<ReportAccessoPDFDto> getRiepilogoIstanzeAnnuale(long idSSessione) {
+		List<ReportAccessoPDFDto> lista = new ArrayList<ReportAccessoPDFDto>();
+		List<Object[]> objList = reportPDFDao.getRiepilogoIstanzeAnnuale(idSSessione);
+
+		for (Object[] obj : objList) {
+			lista.add(ModelToDto.modelToRiepilogoIstanzePDF(obj));
+		}
+
+		return lista;
+	}
+	@Override
+	public List<ReportAccessoPDFDto> getRiepilogoFasiAnnuale(long idSSessione) {
+		List<ReportAccessoPDFDto> lista = new ArrayList<ReportAccessoPDFDto>();
+		List<Object[]> objList = reportPDFDao.getRiepilogoFasiAnnuale(idSSessione);
+
+		for (Object[] obj : objList) {
+			lista.add(ModelToDto.modelToRiepilogoFasiPDF(obj));
+		}
+
+		return lista;
+	}
+	@Override
+	public List<ReportAccessoPDFDto> getRiepilogoRischiAnnuale(long idSSessione) {
+		List<ReportAccessoPDFDto> lista = new ArrayList<ReportAccessoPDFDto>();
+		List<Object[]> objList = reportPDFDao.getRiepilogoRischiAnnuale(idSSessione);
+
+		for (Object[] obj : objList) {
+			lista.add(ModelToDto.modelToRiepilogoRischiPDF(obj));
+		}
+
+		return lista;
+	}
+	@Override
+	public List<ReportAccessoPDFDto> getRisEsprByIdMNonConfAnnuale(Long idMRischio, long idSSessione) {
+		List<ReportAccessoPDFDto> lista = new ArrayList<ReportAccessoPDFDto>();
+		List<Object[]> objList = reportPDFDao.getRisEsprByIdMNonConfAnnuale(
+				idMRischio, idSSessione);
+
+		for (Object[] obj : objList) {
+			lista.add(ModelToDto.modelToRisEsprPDF(obj));
+		}
+
+		return lista;
+	}
+	@Override
+	public List<ReportAccessoPDFDto> getRiepilogoFascicoloAnnuale(long idSSessione) {
+		List<ReportAccessoPDFDto> lista = new ArrayList<ReportAccessoPDFDto>();
+		List<Object[]> objList = reportPDFDao
+				.getRiepilogoFascicoloAnnuale(idSSessione);
+
+		for (Object[] obj : objList) {
+			lista.add(ModelToDto.modelToRiepilogoFascicoloPDF(obj));
+		}
+
+		return lista;
+	}
+	
+	@Override
+	public List<ReportAccessoPDFDto> getRiepilogoDocMancAnnuale(long idSSessione) {
+		List<ReportAccessoPDFDto> lista = new ArrayList<ReportAccessoPDFDto>();
+		List<Object[]> objList = reportPDFDao.getRiepilogoDocMancAnnuale(idSSessione);
+
+		for (Object[] obj : objList) {
+			lista.add(ModelToDto.modelToRiepilogoFascicoloPDF(obj));
+		}
+
+		return lista;
+	}
+	
+	@Override
+	public List<ReportAccessoPDFDto> getEsitoByTipoDifesaWithCodeAndDissensoAnnuale(long idSSessione) {
+		List<ReportAccessoPDFDto> lista = new ArrayList<ReportAccessoPDFDto>();
+		List<Object[]> objList = reportPDFDao
+				.getEsitoByTipoDifesaWithDissensoAnnuale(idSSessione);
+
+		for (Object[] obj : objList) {
+			lista.add(ModelToDto.modelToEsitoDifesaWithCodePDF(obj));
+		}
+		
+		return lista;
+	}
+	
+	@Override
+	public List<ReportAccessoPDFDto> getRiepilogoGiudiziAnnuale(long idSSessione) {
+		List<ReportAccessoPDFDto> lista = new ArrayList<ReportAccessoPDFDto>();
+		List<Object[]> objList = reportPDFDao.getRiepilogoGiudiziAnnuale(idSSessione);
+
+		for (Object[] obj : objList) {
+			lista.add(ModelToDto.modelToRiepilogoGiudiziPDF(obj));
+		}
+		
+		return lista;
+	}
+	
+	@Override
+	public List<ReportAccessoPDFDto> getTipoDifesaIncompletaAnnuale(long idSSessione, String tipoDifesa) {
+		List<ReportAccessoPDFDto> lista = new ArrayList<ReportAccessoPDFDto>();
+		List<Object[]> objList = reportPDFDao.getTipoDifesaIncompletaAnnuale(
+				idSSessione, tipoDifesa);
+
+		for (Object[] obj : objList) {
+			lista.add(ModelToDto.modelToTipoDifesaIncompletaPDF(obj));
+		}
+
+		return lista;
+	}
+	
+	@Override
+	public List<ReportAccessoPDFDto> getRisultatiByTempoAnnuale(long idSSessione) {
+		List<ReportAccessoPDFDto> lista = new ArrayList<ReportAccessoPDFDto>();
+		List<Object[]> objList = reportPDFDao.getRisultatiByTempoAnnuale(idSSessione);
+
+		for (Object[] obj : objList) {
+			lista.add(ModelToDto.modelToRisultatiByTempoPDF(obj));
+		}
+
+		return lista;
+	}
+	
+	@Override
+	public List<ReportAccessoPDFDto> getMNonConfByIdFaseAnnuale(Long idFase, long idSSessione) {
+		List<ReportAccessoPDFDto> lista = new ArrayList<ReportAccessoPDFDto>();
+		List<Object[]> objList = reportPDFDao.getMNonConfByIdFaseAnnuale(idFase,
+				idSSessione);
+
+		for (Object[] obj : objList) {
+			lista.add(ModelToDto.modelToMNonConfPDF(obj));
+		}
+		
+		return lista;
+	}
+	
+	@Override
+	public List<ReportAccessoPDFDto> getVarCompByIdMNonConfAnnuale(long idSSessione, Long idFase, Long idMNonConf) {
+		List<ReportAccessoPDFDto> lista = new ArrayList<ReportAccessoPDFDto>();
+		List<Object[]> objList = reportPDFDao
+				.getVarCompByIdMNonConfAnnuale(idMNonConf);
+
+		for (Object[] obj : objList) {
+			lista.add(ModelToDto.modelToVarCompPDF(obj));
+		}
+
+		return lista;
+	}
+	
+	@Override
+	public List<ReportAccessoPDFDto> getEsitoByTipoDifesaAnnuale(long idSSessione) {
+		List<ReportAccessoPDFDto> lista = new ArrayList<ReportAccessoPDFDto>();
+		List<Object[]> objList = reportPDFDao.getEsitoByTipoDifesaAnnuale(idSSessione);
+
+		for (Object[] obj : objList) {
+			lista.add(ModelToDto.modelToEsitoDifesaPDF(obj));
+		}
+
+		return lista;
+	}
+	
+	@Override
+	public List<String> getListaAuditorsAnnuale(long idSSessione) {
+		return reportPDFDao.getListaAuditorsAnnuale(idSSessione);
+	}
+	
+	@Override
+	public ReportAccessoPDFDto getAllegatoReportAccessoPDFAnnuale(long idSSessione) {
+		ReportAccessoPDFDto accesso = new ReportAccessoPDFDto();
+		Object[] obj = reportPDFDao.getAllegatoReportAccessoPDFAnnuale(idSSessione);
+
+		if (obj != null) {
+			accesso = ModelToDto.modelToAllegatoReportAccessoPDFDto(obj);
+		}
+
+		return accesso;
+	}
+	
+	@Override
+	public List<AtpoPratiche> getReportAllegatiPDFAnnuale(String sede, long idSessione) {
+		return  reportPDFDao.getReportAllegatiPDFAnnuale(sede,idSessione);
+	}
+	
+	@Override
+	public List<Object[]> getGiudiziDefinitiviEtichetteAnnuale() {
+		return reportPDFDao.getGiudiziDefinitiviEtichetteAnnuale();
+	}
+	
+	
+	
+	
 
 }

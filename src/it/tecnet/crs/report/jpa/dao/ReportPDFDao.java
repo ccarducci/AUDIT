@@ -66,4 +66,24 @@ public interface ReportPDFDao {
 
 	public List<Object[]>  getGiudiziDefinitiviSiscoByCampagnaAndSedeWithOutFavorevoli(long idCampagna, String tipoDifesa, String codSede);
 	public String[] getElencoRischi();
+	
+	// ----------
+	public Object[] getReportAccessoPDFAnnuale(long idSSessione);
+	public List<Object[]> getRiepilogoIstanzeAnnuale(long idSSessione);
+	public List<Object[]> getRiepilogoFasiAnnuale(long idSSessione);
+	public List<Object[]> getRiepilogoRischiAnnuale(long idSSessione);
+	public List<Object[]> getRisEsprByIdMNonConfAnnuale(Long idMRischio, long idSSessione);
+	public List<Object[]> getRiepilogoFascicoloAnnuale(long idSSessione);
+	public List<Object[]> getRiepilogoDocMancAnnuale(long idSSessione);
+	public List<Object[]> getEsitoByTipoDifesaWithDissensoAnnuale(long idSSessione);
+	public List<Object[]> getRiepilogoGiudiziAnnuale(long idSSessione);
+	public List<Object[]> getTipoDifesaIncompletaAnnuale(long idSSessione, String tipoDifesa);
+	public List<Object[]> getRisultatiByTempoAnnuale(long idSSessione);
+	public List<Object[]> getMNonConfByIdFaseAnnuale(Long idFase, long idSSessione);
+	public List<Object[]> getVarCompByIdMNonConfAnnuale(Long idMNonConf);
+	public List<Object[]> getEsitoByTipoDifesaAnnuale(long idSSessione);
+	public List<String> getListaAuditorsAnnuale(long idSSessione);
+	public Object[] getAllegatoReportAccessoPDFAnnuale(long idSSessione);
+	public List<AtpoPratiche> getReportAllegatiPDFAnnuale(String sede, long idSessione);
+	public List<Object[]> getGiudiziDefinitiviEtichetteAnnuale();
 }
