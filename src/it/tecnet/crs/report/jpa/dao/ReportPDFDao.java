@@ -67,7 +67,8 @@ public interface ReportPDFDao {
 	public List<Object[]>  getGiudiziDefinitiviSiscoByCampagnaAndSedeWithOutFavorevoli(long idCampagna, String tipoDifesa, String codSede);
 	public String[] getElencoRischi();
 	
-	// ----------
+	// -------------------------------------------
+	// NUOVI REPORT ANGELO
 	public Object[] getReportAccessoPDFAnnuale(long idSSessione);
 	public List<Object[]> getRiepilogoIstanzeAnnuale(long idSSessione);
 	public List<Object[]> getRiepilogoFasiAnnuale(long idSSessione);
