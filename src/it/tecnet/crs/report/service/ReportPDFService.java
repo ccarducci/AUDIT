@@ -65,6 +65,10 @@ public interface ReportPDFService {
 	public List<ReportAccessoPDFDto> getGiudiziDefinitiviSiscoByCampagnaAndSedeWithOutFavorevoli(
 			long idCampagna, String tipoDifesa, String codSede);
 	
+	
+	// ------------------------------------------------------
+	// NUOVI REPORT ANGELO
+	
 	public ReportAccessoPDFDto getReportAccessoAnnualePDF(long idSSessione);
 	public List<ReportAccessoPDFDto> getRiepilogoIstanzeAnnuale(long idSSessione);
 	public List<ReportAccessoPDFDto> getRiepilogoFasiAnnuale(long idSSessione);
