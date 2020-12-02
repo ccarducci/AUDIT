@@ -1084,6 +1084,10 @@ try {
 		
 		return bean;
 	}
+	
+	// -------------------------------------------
+	// NUOVI REPORT ANGELO
+	
 	@Override
 	public Object[] getReportAccessoPDFAnnuale(long idSSessione) {
 		// TODO Auto-generated method stub
