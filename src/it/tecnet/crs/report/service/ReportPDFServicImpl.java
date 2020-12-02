@@ -330,7 +330,7 @@ public class ReportPDFServicImpl implements ReportPDFService {
 	
 	
 	// -------------------------------------------------------------------------------------------------------------------------------------------
-	
+	// GESTIONE NUOVI REPORT DI ANGELO
 	@Override
 	public ReportAccessoPDFDto getReportAccessoAnnualePDF(long idSSessione) {
 		ReportAccessoPDFDto accesso = new ReportAccessoPDFDto();
