@@ -12,7 +12,7 @@ import javax.persistence.Query;
 
 import org.apache.log4j.Logger;
 
-import com.ibm.math.BigDecimal;
+// import com.ibm.math.BigDecimal;
 
 public class ReportPDFDaoImpl implements ReportPDFDao {
 	
