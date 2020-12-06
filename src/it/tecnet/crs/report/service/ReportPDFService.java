@@ -66,9 +66,8 @@ public interface ReportPDFService {
 			long idCampagna, String tipoDifesa, String codSede);
 	
 	
-	// ------------------------------------------------------
-	// NUOVI REPORT ANGELO
-	
+	// -------------------------------------------------------------------------------------------
+	// NUOVI REPORT ANGELO ACCESSO
 	public ReportAccessoPDFDto getReportAccessoAnnualePDF(long idSSessione);
 	public List<ReportAccessoPDFDto> getRiepilogoIstanzeAnnuale(long idSSessione);
 	public List<ReportAccessoPDFDto> getRiepilogoFasiAnnuale(long idSSessione);
@@ -84,8 +83,10 @@ public interface ReportPDFService {
 	public List<ReportAccessoPDFDto> getVarCompByIdMNonConfAnnuale(long idSSessione, Long idFase, Long idMNonConf);
 	public List<ReportAccessoPDFDto> getEsitoByTipoDifesaAnnuale(long idSSessione);
 	public List<String> getListaAuditorsAnnuale(long idSSessione);
-	public ReportAccessoPDFDto getAllegatoReportAccessoPDFAnnuale(long idSSessione);
-	public List<AtpoPratiche> getReportAllegatiPDFAnnuale(String sede, long idSessione);
 	public List<Object[]> getGiudiziDefinitiviEtichetteAnnuale();
 	
+	// --------------------------------------------------------------------------------------------
+	// NUOVI REPORT ANGELO ALLEGATO
+	public String getAllegatoReportAccessoPDFAnnuale(long idSSessione);
+	public List<AtpoPratiche> getReportAllegatiPDFAnnuale(String sede, long idSessione);
 }

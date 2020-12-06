@@ -67,24 +67,28 @@ public interface ReportPDFDao {
 	public List<Object[]>  getGiudiziDefinitiviSiscoByCampagnaAndSedeWithOutFavorevoli(long idCampagna, String tipoDifesa, String codSede);
 	public String[] getElencoRischi();
 	
-	// -------------------------------------------
-	// NUOVI REPORT ANGELO
-	public Object[] getReportAccessoPDFAnnuale(long idSSessione);
-	public List<Object[]> getRiepilogoIstanzeAnnuale(long idSSessione);
-	public List<Object[]> getRiepilogoFasiAnnuale(long idSSessione);
-	public List<Object[]> getRiepilogoRischiAnnuale(long idSSessione);
-	public List<Object[]> getRisEsprByIdMNonConfAnnuale(Long idMRischio, long idSSessione);
-	public List<Object[]> getRiepilogoFascicoloAnnuale(long idSSessione);
-	public List<Object[]> getRiepilogoDocMancAnnuale(long idSSessione);
-	public List<Object[]> getEsitoByTipoDifesaWithDissensoAnnuale(long idSSessione);
-	public List<Object[]> getRiepilogoGiudiziAnnuale(long idSSessione);
-	public List<Object[]> getTipoDifesaIncompletaAnnuale(long idSSessione, String tipoDifesa);
-	public List<Object[]> getRisultatiByTempoAnnuale(long idSSessione);
-	public List<Object[]> getMNonConfByIdFaseAnnuale(Long idFase, long idSSessione);
+	
+	// -------------------------------------------------------------------------------------------
+	// NUOVI REPORT ANGELO ACCESSO
+	public Object[] getReportAccessoPDFAnnuale(long idCampagna);
+	public List<Object[]> getRiepilogoIstanzeAnnuale(long idCampagna);
+	public List<Object[]> getRiepilogoFasiAnnuale(long idCampagna);
+	public List<Object[]> getRiepilogoRischiAnnuale(long idCampagna);
+	public List<Object[]> getRisEsprByIdMNonConfAnnuale(Long idMRischio, long idCampagna);
+	public List<Object[]> getRiepilogoFascicoloAnnuale(long idCampagna);
+	public List<Object[]> getRiepilogoDocMancAnnuale(long idCampagna);
+	public List<Object[]> getEsitoByTipoDifesaWithDissensoAnnuale(long idCampagna);
+	public List<Object[]> getRiepilogoGiudiziAnnuale(long idSSeidCampagnassione);
+	public List<Object[]> getTipoDifesaIncompletaAnnuale(long idCampagna, String tipoDifesa);
+	public List<Object[]> getRisultatiByTempoAnnuale(long idCampagna);
+	public List<Object[]> getMNonConfByIdFaseAnnuale(Long idFase, long idCampagna);
 	public List<Object[]> getVarCompByIdMNonConfAnnuale(Long idMNonConf);
-	public List<Object[]> getEsitoByTipoDifesaAnnuale(long idSSessione);
-	public List<String> getListaAuditorsAnnuale(long idSSessione);
-	public Object[] getAllegatoReportAccessoPDFAnnuale(long idSSessione);
-	public List<AtpoPratiche> getReportAllegatiPDFAnnuale(String sede, long idSessione);
+	public List<Object[]> getEsitoByTipoDifesaAnnuale(long idCampagna);
+	public List<String> getListaAuditorsAnnuale(long idCampagna);
 	public List<Object[]> getGiudiziDefinitiviEtichetteAnnuale();
+	
+	// --------------------------------------------------------------------------------------------
+	// NUOVI REPORT ANGELO ALLEGATO
+	public String getAllegatoReportAccessoPDFAnnuale(long idCampagna);
+	public List<AtpoPratiche> getReportAllegatiPDFAnnuale(String sede, long idCampagna);
 }

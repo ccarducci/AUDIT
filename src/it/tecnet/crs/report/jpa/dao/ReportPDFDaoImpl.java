@@ -12,6 +12,8 @@ import javax.persistence.Query;
 
 import org.apache.log4j.Logger;
 
+import com.ibm.math.BigDecimal;
+
 public class ReportPDFDaoImpl implements ReportPDFDao {
 	
 	@PersistenceContext()
@@ -1085,103 +1087,157 @@ try {
 		return bean;
 	}
 	
-	// -------------------------------------------
-	// NUOVI REPORT ANGELO
 	
+	// -------------------------------------------------------------------------------------------
+	// NUOVI REPORT ANGELO ACCESSO
 	@Override
-	public Object[] getReportAccessoPDFAnnuale(long idSSessione) {
-		// TODO Auto-generated method stub
+	public List<Object[]> getEsitoByTipoDifesaAnnuale(long idCampagna) {
+		// TODO Stub di metodo generato automaticamente
 		return null;
 	}
 	@Override
-	public List<Object[]> getRiepilogoIstanzeAnnuale(long idSSessione) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public List<Object[]> getRiepilogoFasiAnnuale(long idSSessione) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public List<Object[]> getRiepilogoRischiAnnuale(long idSSessione) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public List<Object[]> getRisEsprByIdMNonConfAnnuale(Long idMRischio, long idSSessione) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public List<Object[]> getRiepilogoFascicoloAnnuale(long idSSessione) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public List<Object[]> getRiepilogoDocMancAnnuale(long idSSessione) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public List<Object[]> getEsitoByTipoDifesaWithDissensoAnnuale(long idSSessione) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public List<Object[]> getRiepilogoGiudiziAnnuale(long idSSessione) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public List<Object[]> getTipoDifesaIncompletaAnnuale(long idSSessione, String tipoDifesa) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public List<Object[]> getRisultatiByTempoAnnuale(long idSSessione) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public List<Object[]> getMNonConfByIdFaseAnnuale(Long idFase, long idSSessione) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public List<Object[]> getVarCompByIdMNonConfAnnuale(Long idMNonConf) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public List<Object[]> getEsitoByTipoDifesaAnnuale(long idSSessione) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public List<String> getListaAuditorsAnnuale(long idSSessione) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public Object[] getAllegatoReportAccessoPDFAnnuale(long idSSessione) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public List<AtpoPratiche> getReportAllegatiPDFAnnuale(String sede, long idSessione) {
-		// TODO Auto-generated method stub
+	public List<Object[]> getEsitoByTipoDifesaWithDissensoAnnuale(
+			long idCampagna) {
+		// TODO Stub di metodo generato automaticamente
 		return null;
 	}
 	@Override
 	public List<Object[]> getGiudiziDefinitiviEtichetteAnnuale() {
-		// TODO Auto-generated method stub
+		// TODO Stub di metodo generato automaticamente
+		return null;
+	}
+	@Override
+	public List<String> getListaAuditorsAnnuale(long idCampagna) {
+		// TODO Stub di metodo generato automaticamente
+		return null;
+	}
+	@Override
+	public List<Object[]> getMNonConfByIdFaseAnnuale(Long idFase,
+			long idCampagna) {
+		// TODO Stub di metodo generato automaticamente
+		return null;
+	}
+	@Override
+	public Object[] getReportAccessoPDFAnnuale(long idCampagna) {
+		// TODO Stub di metodo generato automaticamente
+		return null;
+	}
+	@Override
+	public List<Object[]> getRiepilogoDocMancAnnuale(long idCampagna) {
+		// TODO Stub di metodo generato automaticamente
+		return null;
+	}
+	@Override
+	public List<Object[]> getRiepilogoFascicoloAnnuale(long idCampagna) {
+		// TODO Stub di metodo generato automaticamente
+		return null;
+	}
+	@Override
+	public List<Object[]> getRiepilogoFasiAnnuale(long idCampagna) {
+		// TODO Stub di metodo generato automaticamente
+		return null;
+	}
+	@Override
+	public List<Object[]> getRiepilogoGiudiziAnnuale(long idCampagna) {
+		// TODO Stub di metodo generato automaticamente
+		return null;
+	}
+	@Override
+	public List<Object[]> getRiepilogoIstanzeAnnuale(long idCampagna) {
+		// TODO Stub di metodo generato automaticamente
+		return null;
+	}
+	@Override
+	public List<Object[]> getRiepilogoRischiAnnuale(long idCampagna) {
+		// TODO Stub di metodo generato automaticamente
+		return null;
+	}
+	@Override
+	public List<Object[]> getRisEsprByIdMNonConfAnnuale(Long idMRischio,
+			long idCampagna) {
+		// TODO Stub di metodo generato automaticamente
+		return null;
+	}
+	@Override
+	public List<Object[]> getRisultatiByTempoAnnuale(long idCampagna) {
+		// TODO Stub di metodo generato automaticamente
+		return null;
+	}
+	@Override
+	public List<Object[]> getTipoDifesaIncompletaAnnuale(long idCampagna,
+			String tipoDifesa) {
+		// TODO Stub di metodo generato automaticamente
+		return null;
+	}
+	@Override
+	public List<Object[]> getVarCompByIdMNonConfAnnuale(Long idMNonConf) {
+		// TODO Stub di metodo generato automaticamente
 		return null;
 	}
 	
+	// --------------------------------------------------------------------------------------------
+	// NUOVI REPORT ANGELO ALLEGATO
+	@Override
+	public String getAllegatoReportAccessoPDFAnnuale(long idCampagna) {
 	
-	// ---------------------------------------------------------
+		
+		String queryStr = "SELECT NOME FROM AU_CAMPAGNA WHERE ID_CAMPAGNA = " + idCampagna;
+		
+		try {
+			List<String> resultList = em.createNativeQuery(queryStr).getResultList();
+
+			if(!resultList.isEmpty() && resultList.size() > 0){
+				return resultList.get(0).toString();
+			}
+
+		} catch (Throwable e) {
+			e.printStackTrace();
+
+		}
+		
+		return null;
+	}
 	
+	@Override
+	public List<AtpoPratiche> getReportAllegatiPDFAnnuale(String sede,
+			long idCampagna) {
+				/*
+		String queryStr = "select prt.* from ATPO_PRATICHE_SISCO sisco, ATPO_PRATICHE prt, ATPO_ASS_PRATICA_CAMPAGNA ass, AU_SESSIONI sess " 	
+			+"where sisco.ID_PRATICHE_SISCO = prt.ID_PRATICHE_SISCO "
+			+"and sisco.ID_PRATICHE_SISCO = ass.ID_PRATICA_SISCO "
+			//+"and sess.ID_SESSIONE= "+idSessione
+			+"and sess.ID_CAMPAGNA = ass.ID_CAMPAGNA "
+			+"and sess.ID_CAMPAGNA =  "  + idCampagna
+			//+"and prt.sede = '"+sede+"'"
+			+" and (prt.Esito like 'SFAVOREVOLE%' or  "
+			+"	prt.Esito like 'FAVOREVOLE%' or  "
+			+"	prt.Esito like 'PARZIALMENTE%' ) ";*/
+
+		String queryStr = "select prt.* " +
+			"FROM 	AU_S_PRATICA pra	" +
+			", AU_S_SESSIONE ausess	" +
+			", AU_SESSIONI sess	" +
+			", ATPO_PRATICHE prt" +
+			" where " +
+			"	pra.ID_S_SESSIONE = ausess.ID_S_SESSIONE" +
+			" AND ausess.ID_SESSIONE = sess.ID_SESSIONE" +
+			" AND pra.ESAME_PRATICA = 'C'" +
+			" AND ausess.STATO_ESAME_SESSIONE = 'C'" +
+			" AND pra.ID_PRATICA = prt.ID_PRATICHE" +
+			" AND sess.ID_CAMPAGNA =  " + idCampagna +
+			" AND (prt.Esito like 'SFAVOREVOLE%' or  	prt.Esito like 'FAVOREVOLE%' or  	prt.Esito like 'PARZIALMENTE%' ) ";
 	
-	
+		try {
+			
+			List<AtpoPratiche> list = (List<AtpoPratiche>)em.createNativeQuery(queryStr,AtpoPratiche.class).getResultList();
+			return list;
+
+
+		} catch (Throwable e) {
+			e.printStackTrace();
+
+		}
+		
+		return null;
+	}
 }

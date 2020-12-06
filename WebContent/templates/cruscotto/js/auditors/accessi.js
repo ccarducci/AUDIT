@@ -293,7 +293,104 @@ function generateReportPianoMiglioramentoWord(){
 	
 }
 
+// -------------------------------------------------------------------- OKKIO INIZIO
+function generaReportAccessiAnnuale(){
+	
+	var dataLen = $(".chkCampagna:checked").length;
+    if ( dataLen != 1 ){
+    	var settings = {
+				theme: 'teal',
+				sticky: false,
+				horizontalEdge: 'top',
+				verticalEdge: 'right',
+				life: 3000
+		};
+		$.notific8('zindex', 11500);
+		$.notific8('Selezionare solo una campagna!', settings);
+		return true;
+    }else if( dataLen == undefined ){
+    	
+    	var settings = {
+				theme: 'teal',
+				sticky: false,
+				horizontalEdge: 'top',
+				verticalEdge: 'right',
+				life: 3000
+		};
+		$.notific8('zindex', 11500);
+		$.notific8('Selezionare una campagna!', settings);
+		return true;
 
+    }
+    
+    var data = $(".chkCampagna:checked").closest("TR").find("TD:nth-child(5) ").text();
+    if ( data == null || data == undefined || data == '' || data.length == 0 ){
+		var settings = {
+				theme: 'teal',
+				sticky: false,
+				horizontalEdge: 'top',
+				verticalEdge: 'right',
+				life: 3000
+		};
+		$.notific8('zindex', 11500);
+		$.notific8('Selezionare una campagna conclusa', settings);
+		return true;
+    }
+    
+    
+    var campagna = $(".chkCampagna:checked")[0].value;
+	window.location.href= "/CruscottoAuditAtpoWebWeb/jsonATPO/getReportAccessoPDFAnnuale?idCampagna="+campagna;
+}
+
+
+function generaAllegatoReportAccessiAnnuale(){
+	
+	var dataLen = $(".chkCampagna:checked").length;
+    if ( dataLen != 1 ){
+    	var settings = {
+				theme: 'teal',
+				sticky: false,
+				horizontalEdge: 'top',
+				verticalEdge: 'right',
+				life: 3000
+		};
+		$.notific8('zindex', 11500);
+		$.notific8('Selezionare solo una campagna!', settings);
+		return true;
+    }else if( dataLen == undefined ){
+    	
+    	var settings = {
+				theme: 'teal',
+				sticky: false,
+				horizontalEdge: 'top',
+				verticalEdge: 'right',
+				life: 3000
+		};
+		$.notific8('zindex', 11500);
+		$.notific8('Selezionare una campagna!', settings);
+		return true;
+
+    }
+    var data = $(".chkCampagna:checked").closest("TR").find("TD:nth-child(5) ").text();
+    if ( data == null || data == undefined || data == '' || data.length == 0 ){
+		var settings = {
+				theme: 'teal',
+				sticky: false,
+				horizontalEdge: 'top',
+				verticalEdge: 'right',
+				life: 3000
+		};
+		$.notific8('zindex', 11500);
+		$.notific8('Selezionare una campagna conclusa', settings);
+		return true;
+    }
+    
+    var campagna = $(".chkCampagna:checked")[0].value;
+	window.location.href= "/CruscottoAuditAtpoWebWeb/jsonATPO/getAllegatoReportAccessoPDFAnnuale?idCampagna="+campagna;
+	
+}
+
+//-------------------------------------------------------------------- OKKIO FINE
 
 
 

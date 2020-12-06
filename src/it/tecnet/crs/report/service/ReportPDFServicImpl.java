@@ -328,9 +328,8 @@ public class ReportPDFServicImpl implements ReportPDFService {
 		return  reportPDFDao.getElencoRischi();
 	}
 	
-	
-	// -------------------------------------------------------------------------------------------------------------------------------------------
-	// GESTIONE NUOVI REPORT DI ANGELO
+	// -------------------------------------------------------------------------------------------
+	// NUOVI REPORT ANGELO ACCESSO
 	@Override
 	public ReportAccessoPDFDto getReportAccessoAnnualePDF(long idSSessione) {
 		ReportAccessoPDFDto accesso = new ReportAccessoPDFDto();
@@ -506,29 +505,26 @@ public class ReportPDFServicImpl implements ReportPDFService {
 	}
 	
 	@Override
-	public ReportAccessoPDFDto getAllegatoReportAccessoPDFAnnuale(long idSSessione) {
-		ReportAccessoPDFDto accesso = new ReportAccessoPDFDto();
-		Object[] obj = reportPDFDao.getAllegatoReportAccessoPDFAnnuale(idSSessione);
+	public List<Object[]> getGiudiziDefinitiviEtichetteAnnuale() {
+		return reportPDFDao.getGiudiziDefinitiviEtichetteAnnuale();
+	}
+	
+	// --------------------------------------------------------------------------------------------
+	// NUOVI REPORT ANGELO ALLEGATO
+	@Override
+	public String getAllegatoReportAccessoPDFAnnuale(long idSSessione) {
+		
+		String obj = reportPDFDao.getAllegatoReportAccessoPDFAnnuale(idSSessione);
 
 		if (obj != null) {
-			accesso = ModelToDto.modelToAllegatoReportAccessoPDFDto(obj);
+			return obj;
 		}
 
-		return accesso;
+		return null;
 	}
 	
 	@Override
 	public List<AtpoPratiche> getReportAllegatiPDFAnnuale(String sede, long idSessione) {
 		return  reportPDFDao.getReportAllegatiPDFAnnuale(sede,idSessione);
 	}
-	
-	@Override
-	public List<Object[]> getGiudiziDefinitiviEtichetteAnnuale() {
-		return reportPDFDao.getGiudiziDefinitiviEtichetteAnnuale();
-	}
-	
-	
-	
-	
-
 }

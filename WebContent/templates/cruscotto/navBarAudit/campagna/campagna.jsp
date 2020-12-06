@@ -35,8 +35,36 @@
 
                     <!-- BEGIN SAMPLE TABLE PORTLET-->
                     <div class="portlet">
+                    	<div class="row">
+                    		<div class="col-lg-6 col-lg-offset-4 col-xs-12">
+                    			<div class="actions add-action">
+                    			</div>
+
+                                <div class="actions add-action">
+                    			</div>
+                    		</div>
+                     	</div>
+                     	
+                     	
 				        <div class="row">
+				        	<div class="col-lg-6 col-lg-offset-4 col-xs-12">
+				        		<div class="actions add-action">
+				        		</div>
+				        		<div class="actions add-action">
+				        			<button type="button" class="btn blue" onclick="javascript:generaReportAccessiAnnuale()" >Rpt Accesso Annuale</button>
+				        		</div>
+				        		<div class="actions add-action">
+				        			<button type="button" class="btn blue" onclick="javascript:generaAllegatoReportAccessiAnnuale()" >Rpt Allegato Annuale</button>
+				        		</div>
+				        		<div class="actions add-action">
+				        		<br/>
+				        		</div>
+				        	</div>
+				        	<div class="col-lg-6 col-lg-offset-4 col-xs-12">
+				        		<br/>
+				        	</div>
                             <div class="col-lg-6 col-lg-offset-4 col-xs-12">
+                                                   
                                 <div class="actions add-action">
                                     <a data-toggle="modal" href="javascript:slideAsideNew('add');" class="btn btn-default btn-sm">
                                     <i class="fa fa-plus"></i> Nuovo </a>
